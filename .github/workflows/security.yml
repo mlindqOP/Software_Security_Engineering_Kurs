@@ -20,7 +20,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Implement semgrep scanning"
+      #- run: echo "Implement semgrep scanning"
+      - uses: actions/checkout@v4
+      - name: Run Semgrep  
+        run: |
+          semgrep scan \
+          --config p/default \
+          --include todo-app/ \
+          --error
 
 
   trivy:
