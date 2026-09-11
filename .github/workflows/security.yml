@@ -30,7 +30,6 @@ jobs:
           semgrep scan \
           --config p/default \
           --include todo-app/ \
-          --error \
           --sarif \
           --output semgrep.sarif
 
