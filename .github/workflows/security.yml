@@ -19,6 +19,9 @@ jobs:
     name: semgrep/ci
     runs-on: ubuntu-latest
 
+    container:
+      image: semgrep/semgrep
+
     steps:
       #- run: echo "Implement semgrep scanning"
       - uses: actions/checkout@v4
